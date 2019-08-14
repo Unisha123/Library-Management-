@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\User;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -10,14 +13,21 @@ class AdminController extends Controller
    	return view('admin.loginform');
    }
    public function dologin(Request $request){
-   	$username = $request->username;
+   	$email = $request->eamil;
    	$password = $request->password;
-   	//login
-   	if($username){
-   		return redirect('dashboard');
+   	if(Auth::attempt(['email' => $email, 'password' => $password])){
+   		return redirect('/books');
    	}
    	else{
-   		return view('loginform');
+   		return redirect('/');
    	}
    }
+   protected function create(){
+      return User::create([
+         'name' => "Admin",
+         'email' => "admin@cms.com",
+         'password' => Hash::make("password"),
+      ]);
+   }
+      
 }

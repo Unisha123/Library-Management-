@@ -32,13 +32,16 @@ Route::get('/books/delete/{id}',"BooksController@delete");
 //Students
 Route::get('/students','StudentsController@Index');
 Route::get('/students/form','StudentsController@form');
+Route::post('/students/save','StudentsController@save');
+
 
 //BookIssue
 Route::get('/book-issue', 'BookIssueController@Index');
 
 //Login
-Route::get('/admin/login','AdminController@login');
 Route::post('/admin/dologin','AdminController@dologin');
+Route::get('/create','AdminController@create');
+
 
 
 

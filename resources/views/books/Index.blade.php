@@ -28,7 +28,8 @@
 			<td><?php echo $books->publisher ?></td>
 			<td><?php echo $books->edition?></td>
 			<td><?php echo $books->cost ?></td><br>
-
+</tr>
+	<tr>	
 		<td><a href="/books/edit/<?php echo $books->id?>"class="btn btn-success">Edit</a>
 			<a href="/books/delete/<?php echo $books->id?>"class="btn btn-success">Delete</a>
 			</td>

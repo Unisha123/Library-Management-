@@ -3,8 +3,7 @@
 <div class="row">
 	<span class="">Books</span><br/>
 </div>
-<a href="/books/form" class="btn btn-success">Add a Book</a>
-	1 
+
 <div class="row">
 	<table class="table table-striped">
 		
@@ -18,7 +17,7 @@ author:<input type="text" name="author"><br>
 publisher:<input type="text" name="publisher"><br>
 edition:<input type="text" name="edition"><br>
 copies:<input type="text" name="copies"><br>
-cost:<input type="text" name="cost">
+cost:<input type="number" name="cost">
 <input type="submit" value="submit">
 </form>
 @endsection

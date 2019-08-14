@@ -65,8 +65,13 @@
                 text-transform: uppercase;
             }
 
-            .m-b-md {
+             .m-b-md {
                 margin-bottom: 30px;
+            }
+
+            .loginpanel{
+                background:white;
+                padding-bottom:10px;
             }
         </style>
     </head>
@@ -87,8 +92,16 @@
             @endif
 
             <div class="content ttl">
-                <div class="m-b-md">
-                   <h1> Library  Management System </h1>
+                <div class="m-b-md loginpanel">
+                   <h1> Library  Management System </h1><br/>
+                   <form action="/admin/dologin" method="post">
+                            @csrf
+
+                    Email:<input type="text" name="email"><br/>
+                    Password:<input type="text" name="password"><br/>
+                     
+                         <input type="submit" value="Login"/>
+                    </form>
                 </div>
             </div>
         </div>

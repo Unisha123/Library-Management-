@@ -1,8 +1,10 @@
 @extends('layouts.layout')
 @section('content')
 <div class="row">
-<span class="">Students </span><br/>
+
 </div>
+<a href="/students/form" class="btn btn-success">Add Student</a>
+
 <div class="row">
 	<table class="table table-stripped">
 		<tr>
